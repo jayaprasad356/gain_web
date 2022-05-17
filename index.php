@@ -27,9 +27,17 @@
     background-size:cover;
     background-repeat:no-repeat;
     }
-    #btn_s{
-      width:50px!important;
-      margin:auto!important;
+    input{
+      background-color:lightblue!important;
+    }
+    .fa-lg{
+      position: relative;
+      color:grey;
+    float: right;
+    margin-right: 8px;
+    margin-top: -25px;
+    text-align:center;
+    z-index: 2;
     }
      
   </style>

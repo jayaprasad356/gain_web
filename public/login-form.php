@@ -51,12 +51,13 @@ $db->sql($sql_logo);
 $res_logo = $db->getResult();
 
 ?>
+
 <?php echo isset($error['update_user']) ? $error['update_user'] : ''; ?>
 <div class="col-md-4 col-md-offset-4 " style="margin-top:150px;">
     <!-- general form elements -->
     <div class='row' style="background-color:white;border-radius:25px;">
         <div class="col-md-12 text-center">
-            <img src="<?= DOMAIN_URL . 'dist/img/' . $res_logo[0]['value'] ?>" height="110" style="padding-top:10px;box-shadow:4px 4px 4px 4px lightgreen;">
+            <img src="<?= DOMAIN_URL . 'dist/img/' . $res_logo[0]['value'] ?>" height="110" style="margin-top:10px;box-shadow:4px 4px 4px 4px lightgreen;">
             <h3><?= $settings['app_name'] ?> Dashboard</h3>
         </div>
         <div class="box box-info col-md-12">
@@ -71,11 +72,13 @@ $res_logo = $db->getResult();
                 <div class="box-body">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Email :</label>
-                        <input type="text" name="email" class="form-control" value="<?= defined('ALLOW_MODIFICATION') && ALLOW_MODIFICATION == 0 ? 'admin' : '' ?>" required>
+                        <input  type="text" id="usermail" name="email" class="form-control" value="<?= defined('ALLOW_MODIFICATION') && ALLOW_MODIFICATION == 0 ? 'admin' : '' ?>" required>
+                         <i class="fa fa-user fa-lg"></i>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Password :</label>
-                        <input type="password" class="form-control" name="password" value="<?= defined('ALLOW_MODIFICATION') && ALLOW_MODIFICATION == 0 ? 'admin123' : '' ?>" required>
+                        <input type="password" id="userpassword" class="form-control" name="password" value="<?= defined('ALLOW_MODIFICATION') && ALLOW_MODIFICATION == 0 ? 'admin123' : '' ?>" required>
+                        <i class="fa fa-key fa-lg"></i>
                     </div>
                     <div class="box-footer">
                         <button type="submit" name="btnLogin" class="btn btn-info pull-left">Login</button>

@@ -99,7 +99,7 @@ foreach ($res as $row)
                         
                     <!-- /.box-body -->
                     <div class="box-footer">
-                        <input type="submit" class="btn-primary btn" value="Update" name="btnUpdate" />&nbsp;
+                        <input type="submit" class="btn-primary btn" style="background-color:green!important;" value="Update" name="btnUpdate" />&nbsp;
                         
                         <!--<div  id="res"></div>-->
                     </div>
